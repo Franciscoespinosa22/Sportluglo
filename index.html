@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taller Sport LUGLO - Servicio Profesional de Motocicletas en Huixtla, Chiapas</title>
+  <meta name="description" content="Taller Sport LUGLO en Huixtla, Chiapas - Especialistas en reparación y mantenimiento de motocicletas. Servicio profesional para todas las marcas con garantía.">
+  <meta name="keywords" content="taller de motos, reparación de motos, Huixtla, Chiapas, mantenimiento motocicletas, sport luglo, mecánica especializada">
+
+<!-- Favicon -->
+  <!-- Favicons para diferentes dispositivos y navegadores -->
+
+<!-- Iconos generales -->
+<link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="imagenes/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="imagenes/favicon-64x64.png">
+<link rel="icon" type="image/png" sizes="96x96" href="imagenes/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="imagenes/favicon-128x128.png">
+<link rel="icon" type="image/png" sizes="256x256" href="imagenes/favicon-256x256.png">
+<link rel="icon" type="image/png" sizes="512x512" href="imagenes/favicon-512x512.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="imagenes/favicon-180x180.png">
+
+<!-- Android -->
+<link rel="icon" type="image/png" sizes="192x192" href="imagenes/favicon-192x192.png">
+
+<!-- Windows Tiles -->
+<meta name="msapplication-TileImage" content="imagenes/favicon-256x256.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+
+<!-- Tema para navegadores móviles -->
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    :root {
+      /* Colores principales */
+      --primary: #FF6F00;
+      --primary-dark: #E65100;
+      --primary-light: #FFE0B2;
+      --dark: #212121;
+      --darker: #121212;
+      --light: #F5F5F5;
+      --gray: #757575;
+      --gray-light: #E0E0E0;
+      --whatsapp: #25D366;
+      
+      /* Sombras */
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.16);
+      --shadow-lg: 0 10px 20px rgba(0,0,0,0.19);
+      --shadow-xl: 0 20px 25px rgba(0,0,0,0.25);
+      --shadow-primary: 0 0 15px rgba(255, 111, 0, 0.5);
+      
+      /* Transiciones */
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --transition-fast: all 0.15s ease;
+      
+      /* Bordes */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+      --radius-full: 9999px;
+    }
+
+    /* Reset y estilos base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition-fast);
+    }
+
+    button, input, textarea, select {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* Utilidades */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+      color: var(--dark);
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      margin: 15px auto 0;
+      border-radius: var(--radius-full);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      box-shadow: var(--shadow-md);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    .header.scrolled {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(5px);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--dark);
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      color: var(--primary);
+    }
+
+    .nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 8px 0;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus::after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      color: var(--primary);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--dark);
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      min-height: 600px;
+      background: 
+        linear-gradient(rgba(165, 7, 7, 0.691), rgba(0, 0, 0, 0.7)), 
+        url('imagenes/logo.png') center/cover no-repeat;
+      background-size: 90%;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      margin-top: 72px;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-out;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease-out 0.3s forwards;
+      opacity: 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-btn {
+      animation: fadeIn 1s ease-out 0.6s forwards;
+      opacity: 0;
+    }
+
+    /* Servicios */
+    .services {
+      background-color: var(--light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-card-img {
+      width: 85%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .service-card-content {
+      padding: 25px;
+    }
+
+    .service-card-title {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--dark);
+    }
+
+    .service-card-text {
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .service-card-link:hover {
+      gap: 10px;
+    }
+
+    /* Sobre Nosotros */
+    .about {
+      background: linear-gradient(135deg, #fff9e6 0%, #fff3e0 100%);
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-title {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .about-title::after {
+      margin: 15px 0;
+    }
+
+    .about-text {
+      margin-bottom: 25px;
+      color: #5d4037;
+    }
+
+    .about-features {
+      list-style: none;
+    }
+
+    .about-feature {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      color: #5d4037;
+      font-weight: 500;
+    }
+
+    .about-feature-icon {
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+    .about-img {
+      flex: 1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Promoción */
+    .promo {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://images.unsplash.com/photo-1558980394-0c9ac66b151b?auto=format&fit=crop&w=1367&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .promo-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .promo-text {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    /* Ubicación */
+    .location {
+      background-color: #fff;
+    }
+
+    .location-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .location-detail {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .location-detail-icon {
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+
+    .location-map {
+      height: 400px;
+      width: 100%;
+      border: none;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 30px;
+    }
+
+    /* Contacto */
+    .contact {
+      background-color: var(--darker);
+      color: #fff;
+    }
+
+    .contact .section-title {
+      color: #fff;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-label {
+      font-weight: 500;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--gray-light);
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      transition: var(--transition);
+    }
+
+    .form-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.2);
+    }
+
+    .form-textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 15px;
+      background-color: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      margin-top: 10px;
+    }
+
+    .form-submit:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-alternative {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .form-alternative p {
+      margin-bottom: 1rem;
+      color: var(--gray-light);
+    }
+
+    /* WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--whatsapp);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      text-decoration: none;
+      animation: pulse 1.8s infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--darker);
+      color: var(--gray-light);
+      padding: 50px 0 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-link {
+      margin-bottom: 10px;
+    }
+
+    .footer-link a:hover {
+      color: var(--primary);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background-color: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.07);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .section {
+        padding: 60px 0;
+      }
+      
+      .hero-title {
+        font-size: 3rem;
+      }
+      
+      .about-container {
+        flex-direction: column;
+      }
+      
+      .about-img {
+        order: -1;
+        max-width: 600px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .nav {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-150%);
+        transition: var(--transition);
+        z-index: 999;
+      }
+      
+      .nav.active {
+        transform: translateY(0);
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero {
+        min-height: 500px;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .promo-title {
+        font-size: 2rem;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🏍️</span>
+        <span>Taller Sport LUGLO</span>
+      </a>
+      
+      <nav class="nav" id="nav">
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#ubicacion" class="nav-link">Ubicación</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Expertos en Reparación de Motocicletas</h1>
+      <p class="hero-subtitle">Servicio profesional, rápido y confiable para todas las marcas y modelos de motos en Huixtla, Chiapas.</p>
+      <a href="#contacto" class="btn btn-primary hero-btn">Contáctanos</a>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section services" id="servicios">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      
+      <div class="services-grid">
+        <!-- Servicio 1 -->
+        <article class="service-card">
+          <img src="imagenes/image.png" 
+               alt="Mecánico realizando mantenimiento a motocicleta" 
+               class="service-card-img"
+               loading="lazy"
+               width="400"
+               height="300">
+          <div class="service-card-content">
+            <h3 class="service-card-title">Mantenimiento General</h3>
+            <p class="service-card-text">Cambios de aceite, ajuste de frenos, filtros y revisiones completas para mantener tu moto en óptimas condiciones.</p>
+            <a href="#contacto" class="service-card-link">
+              Solicitar servicio
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Servicio 2 -->
+        <article class="service-card">
+          <img src="imagenes/reparacionmotor.png" 
+               alt="Motor de motocicleta siendo reparado" 
+               class="service-card-img"
+               loading="lazy"
+               width="400"
+               height="300">
+          <div class="service-card-content">
+            <h3 class="service-card-title">Reparación de Motor</h3>
+            <p class="service-card-text">Diagnóstico y reparación de problemas mecánicos y eléctricos para que tu motor funcione como nuevo.</p>
+            <a href="#contacto" class="service-card-link">
+              Solicitar servicio
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Servicio 3 -->
+        <article class="service-card">
+          <img src="imagenes/suspencion.png" 
+               alt="Suspensión de motocicleta siendo ajustada" 
+               class="service-card-img"
+               loading="lazy"
+               width="400"
+               height="300">
+          <div class="service-card-content">
+            <h3 class="service-card-title">Alineación y Suspensión</h3>
+            <p class="service-card-text">Ajuste profesional de suspensión y alineación de ruedas para una conducción segura y cómoda.</p>
+            <a href="#contacto" class="service-card-link">
+              Solicitar servicio
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Servicio 4 -->
+        <article class="service-card">
+          <img src="imagenes/electrico.png" 
+               alt="Sistema eléctrico de motocicleta siendo revisado" 
+               class="service-card-img"
+               loading="lazy"
+               width="400"
+               height="300">
+          <div class="service-card-content">
+            <h3 class="service-card-title">Electricidad y Sistemas</h3>
+            <p class="service-card-text">Reparación de luces, baterías, arranque y todos los sistemas eléctricos de tu motocicleta.</p>
+            <a href="#contacto" class="service-card-link">
+              Solicitar servicio
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Nosotros -->
+  <section class="section about" id="nosotros">
+    <div class="container about-container">
+      <div class="about-content">
+        <h2 class="section-title about-title">Sobre Nosotros</h2>
+        <p class="about-text">
+          En Taller de Motos Sport LUGLO llevamos más de 15 años ofreciendo servicios de calidad para motocicletas en Huixtla, Chiapas. 
+          Nuestro equipo de mecánicos certificados está comprometido con brindar la mejor atención y soluciones 
+          para mantener tu moto en perfecto estado.
+        </p>
+        <ul class="about-features">
+          <li class="about-feature">
+            <span class="about-feature-icon">✓</span>
+            <span>Técnicos especializados en todas las marcas</span>
+          </li>
+          <li class="about-feature">
+            <span class="about-feature-icon">✓</span>
+            <span>Repuestos originales y de alta calidad</span>
+          </li>
+          <li class="about-feature">
+            <span class="about-feature-icon">✓</span>
+            <span>Garantía en todos nuestros servicios</span>
+          </li>
+          <li class="about-feature">
+            <span class="about-feature-icon">✓</span>
+            <span>Atención personalizada y rápida</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="about-img">
+        <img src="imagenes/logo.png" 
+             alt="Nuestro taller de motos Sport LUGLO" 
+             loading="lazy"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Promoción -->
+  <section class="promo">
+    <div class="container">
+      <h2 class="promo-title">¡Promoción Especial!</h2>
+      <p class="promo-text">Ven y Descubre. Aprovecha esta oferta limitada.</p>
+      <a href="#contacto" class="btn btn-primary">Reservar Ahora</a>
+    </div>
+  </section>
+
+  <!-- Ubicación -->
+  <section class="section location" id="ubicacion">
+    <div class="container">
+      <h2 class="section-title">Nuestra Ubicación</h2>
+      
+      <div class="location-info">
+        <div class="location-detail">
+          <span class="location-detail-icon">📍</span>
+          <span>Carretera rumbo al ingenio desvío a playa grande. col. Las Delicias, Ciudad Huixtla, Chiapas, CP 30649</span>
+        </div>
+        <div class="location-detail">
+          <span class="location-detail-icon">🕒</span>
+          <span>Lunes a Viernes: 9:00 AM - 7:00 PM | Sábados y Domingos: 9:00 AM - 5:00 PM</span>
+        </div>
+        <div class="location-detail">
+          <span class="location-detail-icon">📞</span>
+          <span>+52 962 416 1522</span>
+        </div>
+      </div>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.1234567890123!2d-92.45678901234567!3d15.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDA3JzI0LjQiTiA5MsKwMjcnMjQuNCJX!5e0!3m2!1ses!2smx!4v1695946800000!5m2!1ses!2smx" 
+              class="location-map" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación del Taller Sport LUGLO en Huixtla, Chiapas">
+      </iframe>
+      
+      <div class="text-center">
+        <a href="https://goo.gl/maps/ejemplo123huixtla" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-primary">
+          Ver en Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section contact" id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contáctanos</h2>
+      
+      <form class="contact-form" id="contact-form">
+        <input type="hidden" id="whatsapp_number" value="529621626202"> <!-- Número de WhatsApp del taller -->
+        
+        <div class="form-group">
+          <label for="name" class="form-label">Nombre completo</label>
+          <input type="text" id="name" name="name" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" id="email" name="email" class="form-input">
+        </div>
+        
+        <div class="form-group">
+          <label for="phone" class="form-label">Teléfono</label>
+          <input type="tel" id="phone" name="phone" class="form-input" required pattern="[0-9]{10}" title="Por favor ingresa un número de 10 dígitos">
+        </div>
+        
+        <div class="form-group">
+          <label for="service" class="form-label">Servicio de interés</label>
+          <select id="service" name="service" class="form-select" required>
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="mantenimiento">Mantenimiento General</option>
+            <option value="reparacion">Reparación de Motor</option>
+            <option value="alineacion">Alineación y Suspensión</option>
+            <option value="electrico">Sistemas Eléctricos</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message" class="form-label">Mensaje (opcional)</label>
+          <textarea id="message" name="message" class="form-textarea"></textarea>
+        </div>
+        
+        <button type="submit" class="form-submit">Enviar por WhatsApp</button>
+        
+        <div class="form-alternative">
+          <p>¿Prefieres llamarnos directamente?</p>
+          <a href="tel:+529621626202" class="btn btn-outline">Llamar ahora</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/529624161522?text=Hola%20Taller%20Sport%20LUGLO,%20quisiera%20información%20sobre%20sus%20servicios"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     title="Chatea con nosotros en WhatsApp">
+    
+  <img src="imagenes/whatsapp.png" alt="WhatsApp" width="30" height="30">
+</a>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="footer-logo">Taller de Motos Sport LUGLO</div>
+          <p>Expertos en reparación y mantenimiento de motocicletas con más de 15 años de experiencia en Huixtla, Chiapas.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h3 class="footer-title">Servicios</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#servicios">Mantenimiento</a></li>
+            <li class="footer-link"><a href="#servicios">Reparación</a></li>
+            <li class="footer-link"><a href="#servicios">Alineación</a></li>
+            <li class="footer-link"><a href="#servicios">Electricidad</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3 class="footer-title">Contacto</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="tel:+529621626202">+52 962 416 1522</a></li>
+            <li class="footer-link"><a href="mailto:contacto@sportluglo.com">contacto@sportluglo.com</a></li>
+            <li class="footer-link"><a href="#ubicacion">Carretera a playa grande Huixtla, Chiapas</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3 class="footer-title">Síguenos</h3>
+          <div class="footer-social">
+            <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank">
+              <img src="imagenes/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank">
+              <img src="imagenes/instagram.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://wa.me/529624161522?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20mantenimiento%20para%20mi%20motocicleta." class="social-link" aria-label="WhatsApp" target="_blank">
+  <img src="imagenes/whatsapp.png" alt="WhatsApp" class="social-icon">
+</a>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Taller de Motos Sport LUGLO. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menu móvil
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const nav = document.getElementById('nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      mobileMenuBtn.textContent = nav.classList.contains('active') ? '✕' : '☰';
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        mobileMenuBtn.textContent = '☰';
+      });
+    });
+    
+    // Header scroll
+    const header = document.getElementById('header');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Función para obtener nombre del servicio
+    function getServiceName(serviceKey) {
+      const services = {
+        'mantenimiento': 'Mantenimiento General',
+        'reparacion': 'Reparación de Motor',
+        'alineacion': 'Alineación y Suspensión',
+        'electrico': 'Sistemas Eléctricos',
+        'otro': 'Otro servicio'
+      };
+      return services[serviceKey] || serviceKey;
+    }
+    
+    // Formulario de contacto con WhatsApp
+    const contactForm = document.getElementById('contact-form');
+    
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Obtener valores del formulario
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+      const whatsappNumber = document.getElementById('whatsapp_number').value;
+      
+      // Validar teléfono (10 dígitos)
+      const phoneRegex = /^[0-9]{10}$/;
+      if (!phoneRegex.test(phone)) {
+        Swal.fire({
+          title: 'Teléfono inválido',
+          text: 'Por favor ingresa un número de 10 dígitos sin espacios ni guiones',
+          icon: 'error',
+          confirmButtonColor: 'var(--primary)'
+        });
+        return;
+      }
+
+      // Validar campos requeridos
+      if (!name || !phone || !service) {
+        Swal.fire({
+          title: 'Campos requeridos',
+          text: 'Por favor completa al menos nombre, teléfono y servicio',
+          icon: 'error',
+          confirmButtonColor: 'var(--primary)'
+        });
+        return;
+      }
+
+      // Crear mensaje estructurado para WhatsApp
+      const whatsappMsg = `*NUEVA SOLICITUD DE SERVICIO - SPORT LUGLO*%0A%0A
+*Nombre:* ${name}%0A
+*Teléfono:* ${phone}%0A
+*Email:* ${email || 'No proporcionado'}%0A
+*Servicio solicitado:* ${getServiceName(service)}%0A
+*Mensaje:* ${message || 'Ninguno'}%0A%0A
+*Fecha:* ${new Date().toLocaleString('es-MX')}%0A%0A
+_Esta solicitud fue enviada desde el sitio web_`;
+
+      // Mensaje para el cliente
+      const clientMsg = `Hola ${name}, gracias por contactar a Taller Sport LUGLO.%0A%0A
+Hemos recibido tu solicitud para:%0A
+*Servicio:* ${getServiceName(service)}%0A%0A
+Nos pondremos en contacto contigo pronto al teléfono ${phone}.%0A%0A
+¿Tienes alguna pregunta adicional?%0A
+Responde a este mensaje y con gusto te atenderemos.`;
+
+      // Abrir WhatsApp con el mensaje para el taller
+      window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMsg}`, '_blank');
+      
+      // Abrir WhatsApp con mensaje de confirmación para el cliente (si proporcionó teléfono)
+      if (phone) {
+        setTimeout(() => {
+          window.open(`https://wa.me/52${phone}?text=${clientMsg}`, '_blank');
+        }, 1000);
+      }
+      
+      // Mostrar confirmación al usuario
+      Swal.fire({
+        title: '¡Solicitud enviada!',
+        html: `Hemos abierto WhatsApp para que completes tu solicitud.<br><br>
+              Si no se abrió automáticamente, <a href="https://wa.me/${whatsappNumber}?text=${whatsappMsg}" target="_blank">haz clic aquí</a>`,
+        icon: 'success',
+        confirmButtonText: 'Entendido',
+        confirmButtonColor: 'var(--primary)'
+      });
+      
+      // Opcional: Resetear el formulario
+      contactForm.reset();
+    });
+    
+    // Scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
